@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Footer Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .comments-section {
+            max-height: 80vh;
+            overflow-y: auto;
+            padding-bottom: 60px; /* Space for the fixed footer */
+        }
+
+        .comment {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .fixed-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .fixed-footer .actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .fixed-footer .actions button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .fixed-footer .comment-bar {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .fixed-footer .comment-bar input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="comments-section">
+        <!-- Example comments -->
+        <div class="comment">Comment 1</div>
+        <div class="comment">Comment 2</div>
+        <div class="comment">Comment 3</div>
+        <div class="comment">Comment 4</div>
+        <div class="comment">Comment 5</div>
+        <div class="comment">Comment 6</div>
+        <div class="comment">Comment 7</div>
+        <div class="comment">Comment 8</div>
+        <div class="comment">Comment 9</div>
+        <div class="comment">Comment 10</div>
+        <div class="comment">Comment 1</div>
+        <div class="comment">Comment 2</div>
+        <div class="comment">Comment 3</div>
+        <div class="comment">Comment 4</div>
+        <div class="comment">Comment 5</div>
+        <div class="comment">Comment 6</div>
+        <div class="comment">Comment 7</div>
+        <div class="comment">Comment 8</div>
+        <div class="comment">Comment 9</div>
+        <div class="comment">Comment 10</div>
+    </div>
+    
+    <div class="fixed-footer">
+        <div class="actions">
+            <button>Like</button>
+            <button>Comment</button>
+            <button>Share</button>
+        </div>
+        <div class="comment-bar">
+            <input type="text" placeholder="Add a comment...">
+        </div>
+    </div>
+</body>
+</html>

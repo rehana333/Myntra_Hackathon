@@ -1,0 +1,197 @@
+#main{
+    margin: auto;
+}
+
+.row{
+    margin-left:auto;
+    
+}
+
+#video-section{
+    height: 90vh;
+    width: 45vw;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+#comment-section{
+    padding-left: 20px;
+    flex: 1;
+    margin: 0;
+    height: 90vh;
+    width: 45vw;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+video{
+    width: fit-content;
+    height: 90vh;
+    display: block;
+    float: right;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+img{
+    width: 34px;
+    height: 34px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+.comment{
+    margin: 10px;
+    padding: 13px;
+}
+
+.com-cont{
+    height: 34px;
+}
+
+.ucomment{
+    margin: 0;
+}
+
+.like-reply{
+    display: flex;
+    
+}
+
+.likebutton{
+    font-size: small;
+    padding-left: 30px;
+    border: none;
+    background-color: transparent;
+    color: grey;
+}
+.replybutton{
+    padding-left: 30px;
+    font-size: small;
+    border: none;
+    background-color: transparent;
+    color: grey;
+}
+
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.fixed-footer .actions {
+    display: flex;
+    gap: 15px;
+}
+
+.fixed-footer .actions button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.fixed-footer .comment-bar {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.fixed-footer .comment-bar input {
+    width: 30vw;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.heart-container {
+    --heart-color: rgb(255, 91, 137);
+    position: relative;
+    width: 25px;
+    height: 25px;
+    transition: .3s;
+  }
+  
+  .heart-container .checkbox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 20;
+    cursor: pointer;
+  }
+  
+  .heart-container .svg-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .heart-container .svg-outline,
+          .heart-container .svg-filled {
+    fill: var(--heart-color);
+    position: absolute;
+  }
+  
+  .heart-container .svg-filled {
+    animation: keyframes-svg-filled 1s;
+    display: none;
+  }
+  
+  .heart-container .svg-celebrate {
+    position: absolute;
+    animation: keyframes-svg-celebrate .5s;
+    animation-fill-mode: forwards;
+    display: none;
+    stroke: var(--heart-color);
+    fill: var(--heart-color);
+    stroke-width: 2px;
+  }
+  
+  .heart-container .checkbox:checked~.svg-container .svg-filled {
+    display: block
+  }
+  
+  .heart-container .checkbox:checked~.svg-container .svg-celebrate {
+    display: block
+  }
+  
+  @keyframes keyframes-svg-filled {
+    0% {
+      transform: scale(0);
+    }
+  
+    25% {
+      transform: scale(1.2);
+    }
+  
+    50% {
+      transform: scale(1);
+      filter: brightness(1.5);
+    }
+  }
+  
+  @keyframes keyframes-svg-celebrate {
+    0% {
+      transform: scale(0);
+    }
+  
+    50% {
+      opacity: 1;
+      filter: brightness(1.5);
+    }
+  
+    100% {
+      transform: scale(1.4);
+      opacity: 0;
+      display: none;
+    }
+  }
